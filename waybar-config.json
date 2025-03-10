@@ -1,0 +1,11 @@
+{
+    "custom/minhypr": {
+        "format": "{}",
+        "interval": "once",
+        "exec": "minhypr show",
+        "on-click": "minhypr restore",
+        "on-click-right": "minhypr restore-all",
+        "return-type": "json",
+        "signal": 8
+    }
+}
