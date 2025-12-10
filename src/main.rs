@@ -160,9 +160,8 @@ fn validate_cached_windows(windows: Vec<MinimizedWindow>) -> Result<Vec<Minimize
     
     for window in windows {
         // Double check: the window must exist in the system AND be in the special:minimized workspace
-        if (windows_json.contains(&window.address.clone()) &&
-           (workspaces_json.contains("special:minimized") &&
-            workspaces_json.contains(&window.address))) {
+        if windows_json.contains(&window.address) &&
+        workspaces_json.contains("special:minimized") {
             valid_windows.push(window);
         } else {
             need_update = true;
